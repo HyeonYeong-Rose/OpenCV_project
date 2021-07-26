@@ -13,5 +13,5 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # 이미지 다른 파일로 저장
-cv2.imwrite('test_another_file.png', img) #다른이름으로 사진저장 성공.
+cv2.imwrite('test_another_cocatoo.png', img) #다른이름으로 사진저장 성공.
 
