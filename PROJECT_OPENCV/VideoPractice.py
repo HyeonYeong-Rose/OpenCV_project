@@ -1,5 +1,8 @@
 import cv2
+import math
+import time
 
+start = time.time()
 cap = cv2.VideoCapture(0) #0: default camera
 #실시간 웹캠화면 출력 성공
 
@@ -8,7 +11,7 @@ cap = cv2.VideoCapture(0) #0: default camera
 
 faceCascade = cv2.CascadeClassifier(
     '.\opencv-master\data\haarcascades\haarcascade_frontalface_default.xml'
-   # './haarcascades/haarcascade_frontalface_default.xml'
+   '.\opencv-master\data\haarcascades\haarcascade_eye.xml'
 )
 while cap.isOpened():
     # 카메라 프레임 읽기
@@ -29,5 +32,9 @@ while cap.isOpened():
         if (key == 27):
             break
 
+
+end = time.time()
 cap.release()
 cv2.destroyAllWindows()
+
+print('소요시간', f"{end-start: .5f} sec")
