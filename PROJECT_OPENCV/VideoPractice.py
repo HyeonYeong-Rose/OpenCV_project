@@ -1,5 +1,4 @@
 import cv2
-import math
 import time
 
 start = time.time()
@@ -11,7 +10,7 @@ cap = cv2.VideoCapture(0) #0: default camera
 
 faceCascade = cv2.CascadeClassifier(
     '.\opencv-master\data\haarcascades\haarcascade_frontalface_default.xml'
-   '.\opencv-master\data\haarcascades\haarcascade_eye.xml'
+   #'.\opencv-master\data\haarcascades\haarcascade_eye.xml'
 )
 while cap.isOpened():
     # 카메라 프레임 읽기
